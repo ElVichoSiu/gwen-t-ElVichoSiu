@@ -1,5 +1,5 @@
 package cl.uchile.dcc
-package Jugador
+package gwent.Jugador
 
 /**
  *
@@ -8,6 +8,7 @@ package Jugador
  * @constructor Crea un Jugador con un nombre
  *
  */
+
 class Jugador (val name: String){
 
 }

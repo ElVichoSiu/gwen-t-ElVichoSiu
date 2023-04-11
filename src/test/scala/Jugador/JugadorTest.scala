@@ -1,6 +1,7 @@
 package cl.uchile.dcc
 package Jugador
 
+import cl.uchile.dcc.gwent.Jugador.Jugador
 import munit.FunSuite
 
 class JugadorTest extends FunSuite {
