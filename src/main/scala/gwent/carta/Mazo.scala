@@ -1,5 +1,5 @@
 package cl.uchile.dcc
-package gwent.Carta
+package gwent.carta
 
 class Mazo (val n: Int){
 

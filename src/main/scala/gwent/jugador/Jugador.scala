@@ -1,7 +1,7 @@
 package cl.uchile.dcc
-package gwent.Jugador
+package gwent.jugador
 
-import cl.uchile.dcc.gwent.Carta.Mazo
+import cl.uchile.dcc.gwent.carta.Mazo
 
 /**
  *
