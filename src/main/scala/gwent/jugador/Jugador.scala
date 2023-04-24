@@ -11,7 +11,6 @@ import cl.uchile.dcc.gwent.carta.Mazo
  *
  */
 
-class Jugador (val name: String, val deck: Mazo(25)) {
-  private var Gemas: Int = 2
+class Jugador (val name: String, val gems: Int = 2) {
 
 }
