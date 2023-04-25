@@ -1,6 +1,7 @@
 package cl.uchile.dcc
 package carta.cartaclima
 
+import cl.uchile.dcc.gwent.carta.cartaclima.classesclima.EscarchaMordiente
 import munit.FunSuite
 
 class EscarchaMordienteTest extends FunSuite {

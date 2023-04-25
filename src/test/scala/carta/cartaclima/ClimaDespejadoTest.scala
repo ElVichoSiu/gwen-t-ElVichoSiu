@@ -1,6 +1,7 @@
 package cl.uchile.dcc
 package carta.cartaclima
 
+import cl.uchile.dcc.gwent.carta.cartaclima.classesclima.ClimaDespejado
 import munit.FunSuite
 
 class ClimaDespejadoTest extends FunSuite {
