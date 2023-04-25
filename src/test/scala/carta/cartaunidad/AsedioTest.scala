@@ -1,6 +1,7 @@
 package cl.uchile.dcc
 package carta.cartaunidad
 
+import cl.uchile.dcc.gwent.carta.cartaunidad.classesunidad.Asedio
 import munit.FunSuite
 
 class AsedioTest extends FunSuite {
