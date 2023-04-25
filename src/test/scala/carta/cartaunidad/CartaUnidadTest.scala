@@ -1,8 +1,7 @@
 package cl.uchile.dcc
 package carta.cartaunidad
 
-import gwent.carta.cartaunidad.CartaUnidad
-
+import cl.uchile.dcc.gwent.carta.cartaunidad.CartaUnidad
 import munit.FunSuite
 
 class CartaUnidadTest extends FunSuite {
