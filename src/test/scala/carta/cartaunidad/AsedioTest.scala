@@ -6,9 +6,9 @@ import munit.FunSuite
 
 class AsedioTest extends FunSuite {
   test("Asedio has a name and strength") {
-    val asedio = new Asedio("Torre", 20)
+    val asedio = new Asedio("Torre", "Unidad de asedio que posee 20 de strength", 20)
     assertEquals(asedio.name, "Torre")
-    assertEquals(asedio.strenght, 20)
+    assertEquals(asedio.strength, 20)
   }
 
 }
