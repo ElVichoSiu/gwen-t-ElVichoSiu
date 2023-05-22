@@ -14,4 +14,5 @@ class Jugador(val name: String, private var _deck: List[ICarta], var gems: Int =
     _deck = scala.util.Random.shuffle(_deck)
 
   }
+  
 }
