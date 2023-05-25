@@ -2,7 +2,7 @@ package cl.uchile.dcc
 package gwent.jugador
 
 import gwent.carta.ICarta
-
+import cl.uchile.dcc.gwent.carta.cartaclima.CartaClima
 import cl.uchile.dcc.gwent.carta.cartaunidad.classesunidad.{ADistancia, Asedio, CuerpoaCuerpo}
 
 class Jugador(val name: String, private var _deck: List[ICarta], var gems: Int = 2,
@@ -20,6 +20,7 @@ class Jugador(val name: String, private var _deck: List[ICarta], var gems: Int =
       _hand = hand.filterNot(_ == c)
       _caczone = c :: caczone
     }
+    
   }
 
   def playADistancia(c: ADistancia): Unit = {
@@ -27,6 +28,7 @@ class Jugador(val name: String, private var _deck: List[ICarta], var gems: Int =
       _hand = hand.filterNot(_ == c)
       _adistanciazone = c :: adistanciazone
     }
+
   }
 
   def playAsedio(c: Asedio): Unit = {
@@ -34,6 +36,7 @@ class Jugador(val name: String, private var _deck: List[ICarta], var gems: Int =
       _hand = hand.filterNot(_ == c)
       _asediozone = c :: asediozone
     }
+
   }
 
   def deck: List[ICarta] = _deck
