@@ -3,6 +3,6 @@ package gwent.carta.cartaclima
 
 import gwent.carta.ICarta
 
-abstract class AbstractCartaClima(val name: String, val description: String) extends ICarta {
+abstract class AbstractCartaClima(val name: String, val description: String) extends CartaClima {
   
 }
