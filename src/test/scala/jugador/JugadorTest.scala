@@ -54,7 +54,7 @@ class JugadorTest extends FunSuite {
     assertEquals(jugador.hand, handi)
     assertEquals(jugador.deck, deck)
     jugador.drawCarta()
-    assertNotEquals (jugador.hand, handi)
+    assertNotEquals(jugador.hand, handi)
     assertNotEquals(jugador.deck, deck)
   }
 
