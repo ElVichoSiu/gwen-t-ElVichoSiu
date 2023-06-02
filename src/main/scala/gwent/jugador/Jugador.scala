@@ -6,14 +6,14 @@ import cl.uchile.dcc.gwent.carta.cartaclima.CartaClima
 import cl.uchile.dcc.gwent.carta.cartaunidad.classesunidad.{ADistancia, Asedio, CuerpoaCuerpo}
 
 class Jugador(val name: String, private var _deck: List[ICarta], var gems: Int = 2,
-              private var _hand: List[ICarta] = List(), private var _caczone: List[CuerpoaCuerpo] = List(),
-              private var _asediozone: List[Asedio] = List(), private var _adistanciazone: List[ADistancia] = List()) extends IJugador {
-
-  def caczone: List[CuerpoaCuerpo] = _caczone
-
+              private var _hand: List[ICarta] = List(), private var _adistanciazone: List[ADistancia] = List(),
+              private var _asediozone: List[Asedio] = List(), private var _caczone: List[CuerpoaCuerpo] = List()) extends IJugador {
+  
   def adistanciazone: List[ADistancia] = _adistanciazone
 
   def asediozone: List[Asedio] = _asediozone
+
+  def caczone: List[CuerpoaCuerpo] = _caczone
 
   def playCuerpoaCuerpo(c: CuerpoaCuerpo): Unit = {
     if (hand.contains(c)) {
