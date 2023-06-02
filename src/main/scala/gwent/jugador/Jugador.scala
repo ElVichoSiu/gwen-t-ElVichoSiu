@@ -20,7 +20,7 @@ class Jugador(val name: String, private var _deck: List[ICarta], var gems: Int =
       _hand = hand.filterNot(_ == c)
       _caczone = c :: caczone
     }
-    
+
   }
 
   def playADistancia(c: ADistancia): Unit = {
