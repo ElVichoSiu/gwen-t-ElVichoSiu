@@ -2,8 +2,10 @@ package cl.uchile.dcc
 package gwent.jugador
 
 import gwent.carta.ICarta
+
 import cl.uchile.dcc.gwent.carta.cartaclima.CartaClima
 import cl.uchile.dcc.gwent.carta.cartaunidad.classesunidad.{ADistancia, Asedio, CuerpoaCuerpo}
+import java.util.Objects
 
 class Jugador(val name: String, private var _deck: List[ICarta], var gems: Int = 2,
               private var _hand: List[ICarta] = List(), private var _adistanciazone: List[ADistancia] = List(),
@@ -44,6 +46,28 @@ class Jugador(val name: String, private var _deck: List[ICarta], var gems: Int =
       _caczone = c :: caczone
     }
 
+  }
+
+  override def equals(obj: Any): Boolean = {
+    if (obj.isInstanceOf[Jugador]) {
+      val other = obj.asInstanceOf[Jugador]
+      (this eq other) ||
+        other.name == name && 
+          other.deck == deck &&
+          other.gems == gems &&
+          other.hand == hand &&
+          other.adistanciazone == adistanciazone &&
+          other.asediozone == asediozone &&
+          other.caczone == caczone
+    } else {
+      false
+    }
+  }
+
+  override def hashCode(): Int = {
+    Objects.hash(
+      classOf[Jugador], name, deck, gems, hand, adistanciazone, asediozone, caczone)
+    
   }
 
   def deck: List[ICarta] = _deck
