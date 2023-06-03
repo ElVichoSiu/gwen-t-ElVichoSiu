@@ -26,4 +26,30 @@ class ADistanciaTest extends FunSuite {
     jugador = new Jugador(name, decki)
   }
 
+  test("ADistancia can be created with a name, a description and strength") {
+    assertEquals(cartadistancia.name, "Arquero")
+    assertEquals(cartadistancia.description, "Unidad a distancia que posee 5 de strength")
+    assertEquals(cartadistancia.strength, 5)
+  }
+
+  test("A ADistancia can be compared") {
+    val cartadistancia1 = new ADistancia("Arquero", "Unidad a distancia que posee 5 de strength", 5)
+    val cartadistancia2 = new ADistancia("Ballestero", "Unidad a distancia que posee 10 de strength", 10)
+    assertEquals(cartadistancia, cartadistancia1)
+    assertNotEquals(cartadistancia, cartadistancia2)
+  }
+
+  test("ADistancia can be played") {
+    assertEquals(jugador.deck, decki)
+    assertEquals(jugador.hand, handi)
+    assertEquals(jugador.adistanciazone, adistanciazonei)
+    jugador.drawCarta()
+    jugador.drawCarta()
+    jugador.drawCarta()
+    cartadistancia.play(jugador)
+    assertNotEquals(jugador.deck, decki)
+    assertNotEquals(jugador.hand, handi)
+    assertNotEquals(jugador.adistanciazone, adistanciazonei)
+  }
+
 }
