@@ -9,4 +9,5 @@ trait ICarta {
 
   val description: String
   
+  def play(j: Jugador): Unit
 }
