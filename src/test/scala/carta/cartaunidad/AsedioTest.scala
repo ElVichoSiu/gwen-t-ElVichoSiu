@@ -26,20 +26,20 @@ class AsedioTest extends FunSuite {
     jugador = new Jugador(name, decki)
   }
 
-  test("CuerpoaCuerpo can be created with a name, a description and strength") {
+  test("Asedio can be created with a name, a description and strength") {
     assertEquals(cartasedio.name, "Torre")
     assertEquals(cartasedio.description, "Unidad de asedio que posee 20 de strength")
     assertEquals(cartasedio.strength, 20)
   }
 
-  test("A CuerpoaCuerpo can be compared") {
+  test("A Asedio can be compared") {
     val cartasedio1 = new Asedio("Torre", "Unidad de asedio que posee 20 de strength", 20)
     val cartasedio2 = new Asedio("Catapulta", "Unidad de asedio que posee 15 de strength", 15)
     assertEquals(cartasedio, cartasedio1)
     assertNotEquals(cartasedio, cartasedio2)
   }
 
-  test("CuerpoaCuerpo can be played") {
+  test("Asedio can be played") {
     assertEquals(jugador.deck, decki)
     assertEquals(jugador.hand, handi)
     assertEquals(jugador.asediozone, asediozonei)
