@@ -7,7 +7,7 @@ import cl.uchile.dcc.gwent.carta.cartaclima.CartaClima
 import cl.uchile.dcc.gwent.carta.cartaunidad.classesunidad.{ADistancia, Asedio, CuerpoaCuerpo}
 import java.util.Objects
 
-class Jugador(val name: String, private var _deck: List[ICarta], var gems: Int = 2,
+class Jugador(val name: String, private var _deck: List[ICarta], var _gems: Int = 2,
               private var _hand: List[ICarta] = List(), private var _adistanciazone: List[ADistancia] = List(),
               private var _asediozone: List[Asedio] = List(), private var _caczone: List[CuerpoaCuerpo] = List()) extends IJugador {
 
@@ -71,6 +71,12 @@ class Jugador(val name: String, private var _deck: List[ICarta], var gems: Int =
   }
 
   def deck: List[ICarta] = _deck
+  
+  def gems: Int = _gems
+  
+  def gems_=(newGems: Int): Unit = {
+    _gems = math.max(0,newGems)
+  }
 
   def hand: List[ICarta] = _hand
 
