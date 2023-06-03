@@ -58,6 +58,11 @@ class JugadorTest extends FunSuite {
     assertNotEquals(jugador.deck, deck)
   }
 
+  test("A jugador class can be compared with itself") {
+    val jugador1 = new Jugador(name, deck)
+    assertEquals(jugador, jugador1)
+  }
+
   test("Jugador is able to play") {
 
   }
