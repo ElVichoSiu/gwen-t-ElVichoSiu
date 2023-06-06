@@ -14,11 +14,11 @@ class JugadorTest extends FunSuite {
   var cartaclimadespejado: ClimaDespejado = _
   var cartalluviatorrencial: LluviaTorrencial = _
   val name = "Geralt"
+  var decki: List[ICarta] = _
   var handi: List[ICarta] = _
   var adistanciazonei: List[ADistancia] = _
   var asediozonei: List[Asedio] = _
   var caczonei: List[CuerpoaCuerpo] = _
-  var decki: List[ICarta] = _
   var jugador: Jugador = _
   override def beforeEach(context: BeforeEach): Unit = {
     cartadistancia = new ADistancia("Arquero", "Unidad a distancia que posee 5 de strength", 5)
@@ -26,11 +26,11 @@ class JugadorTest extends FunSuite {
     cartacuerpoacuerpo = new CuerpoaCuerpo("Ghoul", "Unidad de combate cuerpo a cuerpo que posee 10 de strength", 10)
     cartaclimadespejado = new ClimaDespejado()
     cartalluviatorrencial = new LluviaTorrencial()
+    decki = List(cartadistancia,cartacuerpoacuerpo,cartasedio,cartaclimadespejado,cartalluviatorrencial)
     handi = List()
     adistanciazonei = List()
     asediozonei = List()
     caczonei = List()
-    decki = List(cartadistancia,cartacuerpoacuerpo,cartasedio,cartaclimadespejado,cartalluviatorrencial)
     jugador = new Jugador(name, decki)
   }
 
