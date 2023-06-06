@@ -10,7 +10,7 @@ import munit.FunSuite
 class JugadorTest extends FunSuite {
   var cartadistancia: ADistancia = _
   var cartasedio: Asedio = _
-  var cartacuerpoacuerpo: CuerpoaCuerpo = _
+  var cartacac: CuerpoaCuerpo = _
   var cartaclimadespejado: ClimaDespejado = _
   var cartalluviatorrencial: LluviaTorrencial = _
   val name = "Geralt"
@@ -23,10 +23,10 @@ class JugadorTest extends FunSuite {
   override def beforeEach(context: BeforeEach): Unit = {
     cartadistancia = new ADistancia("Arquero", "Unidad a distancia que posee 5 de strength", 5)
     cartasedio = new Asedio("Torre", "Unidad de asedio que posee 20 de strength", 20)
-    cartacuerpoacuerpo = new CuerpoaCuerpo("Ghoul", "Unidad de combate cuerpo a cuerpo que posee 10 de strength", 10)
+    cartacac = new CuerpoaCuerpo("Ghoul", "Unidad de combate cuerpo a cuerpo que posee 10 de strength", 10)
     cartaclimadespejado = new ClimaDespejado()
     cartalluviatorrencial = new LluviaTorrencial()
-    decki = List(cartadistancia,cartacuerpoacuerpo,cartasedio,cartaclimadespejado,cartalluviatorrencial)
+    decki = List(cartadistancia,cartacac,cartasedio,cartaclimadespejado,cartalluviatorrencial)
     handi = List()
     adistanciazonei = List()
     asediozonei = List()
@@ -76,7 +76,7 @@ class JugadorTest extends FunSuite {
     jugador.drawCarta()
     jugador.playADistancia(cartadistancia)
     jugador.playAsedio(cartasedio)
-    jugador.playCuerpoaCuerpo(cartacuerpoacuerpo)
+    jugador.playCuerpoaCuerpo(cartacac)
     assertNotEquals(jugador.adistanciazone, adistanciazonei)
     assertNotEquals(jugador.asediozone, asediozonei)
     assertNotEquals(jugador.caczone, caczonei)
