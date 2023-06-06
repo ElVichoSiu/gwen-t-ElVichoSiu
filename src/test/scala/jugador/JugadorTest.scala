@@ -1,10 +1,10 @@
 package cl.uchile.dcc
 package jugador
 
-import cl.uchile.dcc.gwent.carta.ICarta
-import cl.uchile.dcc.gwent.carta.cartaclima.classesclima.{ClimaDespejado, LluviaTorrencial}
-import cl.uchile.dcc.gwent.carta.cartaunidad.classesunidad.{ADistancia, Asedio, CuerpoaCuerpo}
-import cl.uchile.dcc.gwent.jugador.Jugador
+import gwent.carta.ICarta
+import gwent.carta.cartaclima.classesclima.{ClimaDespejado, LluviaTorrencial}
+import gwent.carta.cartaunidad.classesunidad.{ADistancia, Asedio, CuerpoaCuerpo}
+import gwent.jugador.Jugador
 import munit.FunSuite
 
 class JugadorTest extends FunSuite {
