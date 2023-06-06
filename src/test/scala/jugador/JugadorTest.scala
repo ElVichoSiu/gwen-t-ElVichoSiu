@@ -61,14 +61,17 @@ class JugadorTest extends FunSuite {
   test("A Jugador class can be compared") {
     val jugador1 = new Jugador(name, decki)
     assertEquals(jugador, jugador1)
+    jugador.shuffleDeck()
+    jugador.drawCarta()
+    assertNotEquals(jugador, jugador1)
   }
 
   test("Jugador is able to play") {
     assertEquals(jugador.adistanciazone, adistanciazonei)
     assertEquals(jugador.asediozone, asediozonei)
     assertEquals(jugador.caczone, caczonei)
-    assertEquals(jugador.hand, handi)
     assertEquals(jugador.deck, decki)
+    assertEquals(jugador.hand, handi)
     jugador.drawCarta()
     jugador.drawCarta()
     jugador.drawCarta()
@@ -80,8 +83,8 @@ class JugadorTest extends FunSuite {
     assertNotEquals(jugador.adistanciazone, adistanciazonei)
     assertNotEquals(jugador.asediozone, asediozonei)
     assertNotEquals(jugador.caczone, caczonei)
-    assertNotEquals(jugador.hand, handi)
     assertNotEquals(jugador.deck, decki)
+    assertNotEquals(jugador.hand, handi)
   }
 
 }
