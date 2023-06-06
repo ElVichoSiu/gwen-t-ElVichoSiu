@@ -34,7 +34,7 @@ class JugadorTest extends FunSuite {
     jugador = new Jugador(name, decki)
   }
 
-  test("Jugador can be created with a name, a deck, gems, a hand, a caczone, a adistanciazone, a asediozone") {
+  test("Jugador can be created with a name, a deck, gems, a hand, a adistanciazone, a asediozone, and a caczone") {
     assertEquals(jugador.name, name)
     assertEquals(jugador.deck, decki)
     assertEquals(jugador.gems, 2)
