@@ -2,7 +2,6 @@ package cl.uchile.dcc
 package gwent.jugador
 
 import gwent.carta.ICarta
-
 import gwent.carta.cartaclima.CartaClima
 import gwent.carta.cartaunidad.classesunidad.{ADistancia, Asedio, CuerpoaCuerpo}
 import scala.util.Random
