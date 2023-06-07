@@ -13,7 +13,6 @@ class Jugador(val name: String, private var _deck: List[ICarta], private var _ge
 
   def shuffleDeck(): Unit = {
     _deck = Random.shuffle(_deck)
-
   }
 
   def drawCarta(): ICarta = {
@@ -21,7 +20,6 @@ class Jugador(val name: String, private var _deck: List[ICarta], private var _ge
     _deck = deck.tail
     _hand = carta :: hand
     carta
-
   }
 
   def playADistancia(c: ADistancia): Unit = {
@@ -29,7 +27,6 @@ class Jugador(val name: String, private var _deck: List[ICarta], private var _ge
       _hand = hand.filterNot(_ == c)
       _adistanciazone = c :: adistanciazone
     }
-
   }
 
   def playAsedio(c: Asedio): Unit = {
@@ -37,7 +34,6 @@ class Jugador(val name: String, private var _deck: List[ICarta], private var _ge
       _hand = hand.filterNot(_ == c)
       _asediozone = c :: asediozone
     }
-
   }
 
   def playCuerpoaCuerpo(c: CuerpoaCuerpo): Unit = {
@@ -45,7 +41,6 @@ class Jugador(val name: String, private var _deck: List[ICarta], private var _ge
       _hand = hand.filterNot(_ == c)
       _caczone = c :: caczone
     }
-
   }
 
   override def equals(obj: Any): Boolean = {
@@ -65,9 +60,7 @@ class Jugador(val name: String, private var _deck: List[ICarta], private var _ge
   }
 
   override def hashCode(): Int = {
-    Objects.hash(
-      classOf[Jugador], name, deck, gems, hand, adistanciazone, asediozone, caczone)
-    
+    Objects.hash(classOf[Jugador], name, deck, gems, hand, adistanciazone, asediozone, caczone)
   }
 
   def deck: List[ICarta] = _deck
