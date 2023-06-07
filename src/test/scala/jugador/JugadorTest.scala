@@ -53,7 +53,9 @@ class JugadorTest extends FunSuite {
   test("Jugador is able to draw a carta from the deck") {
     assertEquals(jugador.hand, handi)
     assertEquals(jugador.deck, decki)
-    jugador.drawCarta()
+    val c: ICarta = jugador.drawCarta()
+    val h: List[ICarta] = List(c)
+    assertEquals(jugador.hand, h)
     assertNotEquals(jugador.hand, handi)
     assertNotEquals(jugador.deck, decki)
   }
