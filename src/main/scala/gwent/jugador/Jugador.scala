@@ -8,7 +8,7 @@ import gwent.carta.cartaunidad.classesunidad.{ADistancia, Asedio, CuerpoaCuerpo}
 import scala.util.Random
 import java.util.Objects
 
-class Jugador(val name: String, private var _deck: List[ICarta], var _gems: Int = 2,
+class Jugador(val name: String, private var _deck: List[ICarta], private var _gems: Int = 2,
               private var _hand: List[ICarta] = List(), private var _adistanciazone: List[ADistancia] = List(),
               private var _asediozone: List[Asedio] = List(), private var _caczone: List[CuerpoaCuerpo] = List()) extends IJugador {
 
