@@ -3,8 +3,8 @@ package gwent.jugador
 
 import gwent.carta.ICarta
 
-import cl.uchile.dcc.gwent.carta.cartaclima.CartaClima
-import cl.uchile.dcc.gwent.carta.cartaunidad.classesunidad.{ADistancia, Asedio, CuerpoaCuerpo}
+import gwent.carta.cartaclima.CartaClima
+import gwent.carta.cartaunidad.classesunidad.{ADistancia, Asedio, CuerpoaCuerpo}
 import java.util.Objects
 
 class Jugador(val name: String, private var _deck: List[ICarta], var _gems: Int = 2,
