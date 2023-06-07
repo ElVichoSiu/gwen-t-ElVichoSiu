@@ -47,13 +47,13 @@ class Jugador(val name: String, private var _deck: List[ICarta], private var _ge
     if (obj.isInstanceOf[Jugador]) {
       val other = obj.asInstanceOf[Jugador]
       (this eq other) ||
-        other.name == name && 
-          other.deck == deck &&
-          other.gems == gems &&
-          other.hand == hand &&
-          other.adistanciazone == adistanciazone &&
-          other.asediozone == asediozone &&
-          other.caczone == caczone
+        other.name == name &&
+        other.deck == deck &&
+        other.gems == gems &&
+        other.hand == hand &&
+        other.adistanciazone == adistanciazone &&
+        other.asediozone == asediozone &&
+        other.caczone == caczone
     } else {
       false
     }
