@@ -4,10 +4,12 @@ package gwent.zona
 import gwent.carta.cartaclima.CartaClima
 
 object ZonaClima {
-  private var cartaClima: Option[CartaClima] = None
+  private var _cartaClima: Option[CartaClima] = None
 
   def setCartaClima(c: CartaClima): Unit = {
-    cartaClima = Some(c)
+    _cartaClima = Some(c)
   }
+  
+  def cartaClima: Option[CartaClima] = _cartaClima
 
 }

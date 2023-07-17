@@ -5,6 +5,8 @@ import gwent.carta.ICarta
 import gwent.carta.cartaclima.classesclima.{ClimaDespejado, LluviaTorrencial}
 import gwent.carta.cartaunidad.classesunidad.{ADistancia, Asedio, CuerpoaCuerpo}
 import gwent.jugador.Jugador
+import gwent.zona.ZonaClima
+
 import munit.FunSuite
 
 class JugadorTest extends FunSuite {
@@ -74,6 +76,7 @@ class JugadorTest extends FunSuite {
     assertEquals(jugador.caczone, caczonei)
     assertEquals(jugador.deck, decki)
     assertEquals(jugador.hand, handi)
+    assertEquals(ZonaClima.cartaClima, None)
     jugador.drawCarta()
     jugador.drawCarta()
     jugador.drawCarta()
@@ -82,11 +85,13 @@ class JugadorTest extends FunSuite {
     jugador.playCarta(cartadistancia)
     jugador.playCarta(cartasedio)
     jugador.playCarta(cartacac)
+    jugador.playCarta(cartalluviatorrencial)
     assertNotEquals(jugador.adistanciazone, adistanciazonei)
     assertNotEquals(jugador.asediozone, asediozonei)
     assertNotEquals(jugador.caczone, caczonei)
     assertNotEquals(jugador.deck, decki)
     assertNotEquals(jugador.hand, handi)
+    assertEquals(ZonaClima.cartaClima, Some(cartalluviatorrencial))
   }
 
 }
