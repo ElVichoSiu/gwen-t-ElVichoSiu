@@ -1,5 +1,5 @@
 package cl.uchile.dcc
-package gwent.controlador
+package gwent.controlador.state
 
 class GameState {
 
