@@ -4,6 +4,8 @@ package gwent.jugador
 import gwent.carta.ICarta
 import gwent.carta.cartaclima.CartaClima
 import gwent.carta.cartaunidad.classesunidad.{ADistancia, Asedio, CuerpoaCuerpo}
+import gwent.zona.ZonaClima
+
 import scala.util.Random
 import java.util.Objects
 
@@ -44,6 +46,13 @@ class Jugador(val name: String, private var _deck: List[ICarta], private var _ge
     if (hand.contains(c)) {
       _hand = hand.filterNot(_ == c)
       _caczone = c :: caczone
+    }
+  }
+  
+  def playCartaClima(c: CartaClima): Unit = {
+    if (hand.contains(c)) {
+      _hand = hand.filterNot(_ == c)
+      ZonaClima.setCartaClima(c)
     }
   }
 
