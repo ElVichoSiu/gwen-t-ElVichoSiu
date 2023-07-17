@@ -25,6 +25,7 @@ class Jugador(val name: String, private var _deck: List[ICarta], private var _ge
   def playCarta(c: ICarta): Unit = {
     c.play(this)
   }
+  
   def playADistancia(c: ADistancia): Unit = {
     if (hand.contains(c)) {
       _hand = hand.filterNot(_ == c)
