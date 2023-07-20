@@ -4,7 +4,7 @@ package gwent.controlador.state
 import gwent.controlador.GameController
 
 class TurnoPC(context: GameController) extends GameState(context) {
-  
+
   override def jugarCarta(c: GameController): Unit = {
     c.state = new TurnoJugador(c)
   }
