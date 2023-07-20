@@ -10,7 +10,7 @@ class GameController {
   private var playerCharacters = List.empty[Jugador]
   private var enemyCharacters = List.empty[Jugador]
 
-  private var state: GameState = new GameStart(this)
+  var state: GameState = new GameStart(this)
 
   def addPlayerCharacter(name: String, deck: List[ICarta]): Unit = {
     playerCharacters = playerCharacters :+ new Jugador(name, deck)
