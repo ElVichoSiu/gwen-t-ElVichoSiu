@@ -5,4 +5,12 @@ import gwent.controlador.GameController
 
 class SoloTurnoJugador(context: GameController) extends GameState(context) {
 
+  override def jugarCarta(c: GameController): Unit = {
+    c.state = new SoloTurnoJugador(c)
+  }
+
+  override def pasar(c: GameController): Unit = {
+    c.state = new GameStart(c)
+  }
+  
 }
