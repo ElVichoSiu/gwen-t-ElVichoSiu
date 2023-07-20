@@ -17,4 +17,4 @@ This project's goal is to create a (simplified) clone of the
 
 ## Diagrama de estados
 
-![Diagrama de estados](doc/) 
+![Diagrama de estados](doc/Diagrama%20de%20Estados_page-0001.jpg) 
